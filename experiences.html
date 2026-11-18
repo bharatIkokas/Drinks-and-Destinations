@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experiences | Drinks &amp; Destinations</title>
+  <meta name="description" content="Tastings, masterclasses, buyer-seller platforms and curated industry events — designed to create real connections across the drinks world.">
+  <meta name="theme-color" content="#f9f6f2">
+
+  <!-- Swap .no-js for .js before first paint so reveal states never flash -->
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <!-- Fonts: Hedvig Letters Serif (Google). Kross Neue Grotesk + Qartella are loaded from /fonts via @font-face in style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Space+Grotesk:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-inner page-experiences">
+  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <div class="site-header__left">
+        <a class="logo" href="index.html" aria-label="Drinks &amp; Destinations – home">
+          <img class="logo__img" src="images/logo.png" alt="" width="178" height="50" decoding="async">
+          <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="primary-nav__list">
+            <li><a class="nav-tab" href="index.html">Home</a></li>
+            <li class="has-dropdown" data-dropdown>
+              <div class="nav-split">
+                <a class="nav-tab nav-tab--split" href="news-insights.html">News &amp; Insights</a>
+                <button class="nav-caret" type="button" aria-expanded="false" aria-controls="dd-news" aria-label="Show News &amp; Insights menu" data-dropdown-toggle>
+                  <svg class="nav-tab__caret" width="10" height="5" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+                </button>
+              </div>
+              <ul class="dropdown" id="dd-news" data-dropdown-menu>
+                <li><a href="latest-news.html">Drinks industry news</a></li>
+                <li><a href="interviews.html">Interviews</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="industry-stories.html">Industry stories</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-tab" href="about-us.html">About us</a></li>
+            <li><a class="nav-tab" href="#">Consulting</a></li>
+            <li><a class="nav-tab is-active" href="experiences.html" aria-current="page">Experiences</a></li>
+            <li><a class="nav-tab" href="rtmis.html">RTMIS</a></li>
+            <li><a class="nav-tab" href="in-the-news.html">In the news</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-header__right">
+        <a class="btn btn--solid btn--display" href="#">Partner with us</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-burger>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html">Home</a></li>
+        <li class="mobile-menu__group">
+          <div class="mobile-menu__row">
+            <a href="news-insights.html">News &amp; Insights</a>
+            <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mm-news" aria-label="Show News &amp; Insights links" data-accordion>
+              <svg width="12" height="6" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <ul id="mm-news" class="mobile-menu__sub" hidden>
+            <li><a href="latest-news.html">Drinks industry news</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="industry-stories.html">Industry stories</a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="#">Consulting</a></li>
+        <li><a href="experiences.html" aria-current="page">Experiences</a></li>
+        <li><a href="rtmis.html">RTMIS</a></li>
+        <li><a href="in-the-news.html">In the news</a></li>
+      </ul>
+      <a class="btn btn--solid btn--display mobile-menu__cta" href="#">Partner with us</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ============ EXPERIENCES: INTRO ============ -->
+    <section class="xp-intro" aria-labelledby="xp-title">
+      <div class="container">
+        <div class="xp-intro__box">
+          <ul class="xp-tiles" role="list">
+            <li><a class="xp-tile" href="#tasting-atlas"><span class="xp-tile__logo media" data-label="exp-tasting-atlas.png"><img src="images/exp-tasting-atlas.png" alt="The Tasting Atlas" width="300" height="300" decoding="async"></span></a></li>
+            <li><a class="xp-tile" href="#agents-of-cheer"><span class="xp-tile__logo media" data-label="exp-agents-of-cheer.png"><img src="images/exp-agents-of-cheer.png" alt="Agents of Cheer, The Drinks Fest" width="300" height="300" decoding="async"></span></a></li>
+            <li><a class="xp-tile" href="#story-in-a-bottle"><span class="xp-tile__logo media" data-label="exp-story-in-a-bottle.png"><img src="images/exp-story-in-a-bottle.png" alt="Story in a Bottle" width="300" height="300" decoding="async"></span></a></li>
+            <li><a class="xp-tile xp-tile--text" href="#brands-led-masterclass">Brands-led Masterclasses</a></li>
+          </ul>
+          <div class="xp-intro__text">
+            <h1 class="xp-intro__title" id="xp-title" data-reveal>Experiences That Brings People Together.</h1>
+            <p class="xp-intro__lead" data-reveal>Tastings, masterclasses, buyer-seller platforms and curated industry events — designed to create real connections across the drinks world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE: TASTING ATLAS ============ -->
+    <section class="xp-section" id="tasting-atlas" aria-labelledby="tasting-atlas-title">
+      <div class="container xp-section__grid">
+        <div class="xp-section__text" data-reveal>
+          <h2 class="xp-section__title" id="tasting-atlas-title">Tasting Atlas</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+            <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+          <button class="xp-btn" type="button" data-dialog-open="inquiry-tasting-atlas" aria-haspopup="dialog">Start an inquiry<span class="visually-hidden"> about Tasting Atlas</span></button>
+        </div>
+        <div class="xp-gallery" data-reveal>
+          <div class="xp-gallery__main media" data-label="exp-tasting-1.jpg"><img src="images/exp-tasting-1.jpg" alt="Friends raising glasses of red wine in a toast" width="760" height="356" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-tasting-2.jpg"><img src="images/exp-tasting-2.jpg" alt="Rosé wine being poured into a glass at a bar" width="364" height="476" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-tasting-3.jpg"><img src="images/exp-tasting-3.jpg" alt="Close-up of a glass of white wine" width="364" height="476" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ============ EXPERIENCE: AGENTS OF CHEERS ============ -->
+    <section class="xp-section" id="agents-of-cheer" aria-labelledby="agents-of-cheer-title">
+      <div class="container xp-section__grid">
+        <div class="xp-section__text" data-reveal>
+          <h2 class="xp-section__title" id="agents-of-cheer-title">Agents of Cheers</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+            <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+          <button class="xp-btn" type="button" data-dialog-open="inquiry-agents-of-cheer" aria-haspopup="dialog">Start an inquiry<span class="visually-hidden"> about Agents of Cheers</span></button>
+        </div>
+        <div class="xp-gallery" data-reveal>
+          <div class="xp-gallery__main media" data-label="exp-cheer-1.jpg"><img src="images/exp-cheer-1.jpg" alt="Two glasses of white wine clinking" width="760" height="356" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-cheer-2.jpg"><img src="images/exp-cheer-2.jpg" alt="Two champagne flutes raised outdoors" width="364" height="476" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-cheer-3.jpg"><img src="images/exp-cheer-3.jpg" alt="Red wine splashing into a glass" width="364" height="476" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ============ EXPERIENCE: STORY IN A BOTTLE ============ -->
+    <section class="xp-section" id="story-in-a-bottle" aria-labelledby="story-in-a-bottle-title">
+      <div class="container xp-section__grid">
+        <div class="xp-section__text" data-reveal>
+          <h2 class="xp-section__title" id="story-in-a-bottle-title">Story in a Bottle</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+            <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+          <button class="xp-btn" type="button" data-dialog-open="inquiry-story-in-a-bottle" aria-haspopup="dialog">Start an inquiry<span class="visually-hidden"> about Story in a Bottle</span></button>
+        </div>
+        <div class="xp-gallery" data-reveal>
+          <div class="xp-gallery__main media" data-label="exp-story-1.jpg"><img src="images/exp-story-1.jpg" alt="Wine bottles stacked on their sides in a rack" width="760" height="356" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-story-2.jpg"><img src="images/exp-story-2.jpg" alt="A wine bottle on a wooden table against a brick wall" width="364" height="476" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-story-3.jpg"><img src="images/exp-story-3.jpg" alt="A bottle of red wine and a glass outdoors" width="364" height="476" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ============ EXPERIENCE: BRANDS-LED MASTERCLASS ============ -->
+    <section class="xp-section" id="brands-led-masterclass" aria-labelledby="brands-led-masterclass-title">
+      <div class="container xp-section__grid">
+        <div class="xp-section__text" data-reveal>
+          <h2 class="xp-section__title" id="brands-led-masterclass-title">Brands-led Masterclass</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+            <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
+          <button class="xp-btn" type="button" data-dialog-open="inquiry-brands-led-masterclass" aria-haspopup="dialog">Start an inquiry<span class="visually-hidden"> about Brands-led Masterclass</span></button>
+        </div>
+        <div class="xp-gallery" data-reveal>
+          <div class="xp-gallery__main media" data-label="exp-master-1.jpg"><img src="images/exp-master-1.jpg" alt="Shelves of wine bottles in a cellar" width="760" height="356" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-master-2.jpg"><img src="images/exp-master-2.jpg" alt="Picnic with a bottle of white wine and glasses" width="364" height="476" loading="lazy" decoding="async"></div>
+          <div class="xp-gallery__sm media" data-label="exp-master-3.jpg"><img src="images/exp-master-3.jpg" alt="Friends toasting with glasses of wine" width="364" height="476" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STAY IN THE KNOW ============ -->
+    <section class="section signup" id="newsletter" aria-labelledby="signup-title">
+      <div class="container signup__grid">
+        <div class="signup__text">
+          <h2 class="h2" id="signup-title" data-reveal>Stay in the know</h2>
+          <p class="signup__lead" data-reveal>News, insights and the stories from the world of drinks - sent occasionally.</p>
+        </div>
+
+        <form class="signup-form" data-newsletter novalidate aria-labelledby="signup-title" data-reveal>
+          <div class="signup-form__fields">
+            <label class="visually-hidden" for="nl-name">Name</label>
+            <input class="signup-form__input" id="nl-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+            <label class="visually-hidden" for="nl-email">Email ID</label>
+            <input class="signup-form__input" id="nl-email" name="email" type="email" autocomplete="email" placeholder="Email ID" required>
+            <label class="visually-hidden" for="nl-phone">Phone number (optional)</label>
+            <input class="signup-form__input" id="nl-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number" pattern="[0-9+()\-\s]{7,20}">
+          </div>
+          <div class="signup-form__row">
+            <label class="signup-form__check">
+              <input type="checkbox" name="consent" required>
+              <span>I agree to receive updates</span>
+            </label>
+            <button class="btn btn--display signup-form__btn" type="submit">Subscribe</button>
+          </div>
+          <p class="signup-form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="partner" aria-labelledby="footer-cta-title">
+    <div class="container">
+      <p class="footer-label" data-reveal>Start a conversation</p>
+      <h2 class="footer-title" id="footer-cta-title" data-reveal>Let’s build something together</h2>
+
+      <ul class="footer-paths" role="list">
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For brands</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Consulting%20enquiry">Consulting</a></h3>
+          <p class="footer-path__text">Market entry, brand strategy and advisory for the Indian drinks market</p>
+        </li>
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For industry</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Brand%20collaboration">Brand collaboration</a></h3>
+          <p class="footer-path__text">Events, content, tasting and experiences that create real connection</p>
+        </li>
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For press</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Media%20partnership">Media partnership</a></h3>
+          <p class="footer-path__text">Editorial coverage, speaking, judging and media representation</p>
+        </li>
+      </ul>
+
+      <div class="footer-contact">
+        <a class="footer-contact__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+        <ul class="footer-social" role="list">
+          <li><a href="https://twitter.com/RojitaTiwari" target="_blank" rel="noopener" aria-label="X / Twitter (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          </a></li>
+          <li><a href="https://www.facebook.com/rojita.tiwari/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          </a></li>
+          <li><a href="https://www.instagram.com/drinksanddestinations/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <a class="logo logo--light footer-bottom__logo" href="#top" aria-label="Drinks &amp; Destinations – back to top">
+          <img class="logo__img" src="images/footer-logo.png" alt="" width="67" height="19" loading="lazy" decoding="async">
+          <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
+        </a>
+        <nav class="footer-bottom__links" aria-label="Legal">
+          <a href="#">Privacy</a>
+          <a href="mailto:drinksandestinations@gmail.com">Contact</a>
+        </nav>
+        <p class="footer-bottom__copy">© <span data-year>2026</span> Drinks and Destinations</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Inquiry dialog: Tasting Atlas =====
+       WordPress: replace the <form> with this section's own Contact Form 7 form, e.g. [contact-form-7 id="…" title="Inquiry – Tasting Atlas"],
+       keeping a hidden field named "experience" so each submission says which section it came from. -->
+  <dialog class="inquiry" id="inquiry-tasting-atlas" aria-labelledby="inq-tasting-atlas-title" data-dialog>
+    <div class="inquiry__inner">
+      <button class="inquiry__close" type="button" aria-label="Close inquiry form" data-dialog-close>
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <div class="inquiry__intro">
+        <p class="inquiry__eyebrow">Tasting Atlas</p>
+        <h2 class="inquiry__title" id="inq-tasting-atlas-title">Tell us about your brand.</h2>
+        <p class="inquiry__lead">We’ll reply within a few working days.</p>
+        <a class="inquiry__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+      </div>
+      <form class="inquiry-form" id="inq-tasting-atlas-form" action="#" method="post" novalidate data-inquiry-form>
+        <input type="hidden" name="experience" value="Tasting Atlas">
+        <div class="inquiry-form__grid">
+          <label class="visually-hidden" for="inq-tasting-atlas-name">Name</label>
+          <input class="inquiry-form__input" id="inq-tasting-atlas-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+          <label class="visually-hidden" for="inq-tasting-atlas-company">Company / Brand</label>
+          <input class="inquiry-form__input" id="inq-tasting-atlas-company" name="company" type="text" autocomplete="organization" placeholder="Company / Brand">
+          <label class="visually-hidden" for="inq-tasting-atlas-email">Email address</label>
+          <input class="inquiry-form__input" id="inq-tasting-atlas-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+          <label class="visually-hidden" for="inq-tasting-atlas-phone">Phone number</label>
+          <input class="inquiry-form__input" id="inq-tasting-atlas-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number">
+          <label class="visually-hidden" for="inq-tasting-atlas-market">Market(s) of interest</label>
+          <input class="inquiry-form__input" id="inq-tasting-atlas-market" name="market" type="text" placeholder="Market(s) of interest">
+          <label class="visually-hidden" for="inq-tasting-atlas-service">Service needed</label>
+          <div class="inquiry-form__select">
+            <select class="inquiry-form__input" id="inq-tasting-atlas-service" name="service">
+                  <option selected>Tasting experience</option>
+                  <option>Event / festival partnership</option>
+                  <option>Brand storytelling</option>
+                  <option>Brand-led masterclass</option>
+                  <option>Buyer-seller platform</option>
+                  <option>Other</option>
+            </select>
+          </div>
+          <label class="visually-hidden" for="inq-tasting-atlas-message">Tell us about your project</label>
+          <textarea class="inquiry-form__input inquiry-form__textarea" id="inq-tasting-atlas-message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+        </div>
+        <button class="inquiry-form__btn" type="submit">Send inquiry</button>
+        <p class="inquiry-form__msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+  <!-- ===== Inquiry dialog: Agents of Cheers =====
+       WordPress: replace the <form> with this section's own Contact Form 7 form, e.g. [contact-form-7 id="…" title="Inquiry – Agents of Cheers"],
+       keeping a hidden field named "experience" so each submission says which section it came from. -->
+  <dialog class="inquiry" id="inquiry-agents-of-cheer" aria-labelledby="inq-agents-of-cheer-title" data-dialog>
+    <div class="inquiry__inner">
+      <button class="inquiry__close" type="button" aria-label="Close inquiry form" data-dialog-close>
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <div class="inquiry__intro">
+        <p class="inquiry__eyebrow">Agents of Cheers</p>
+        <h2 class="inquiry__title" id="inq-agents-of-cheer-title">Tell us about your brand.</h2>
+        <p class="inquiry__lead">We’ll reply within a few working days.</p>
+        <a class="inquiry__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+      </div>
+      <form class="inquiry-form" id="inq-agents-of-cheer-form" action="#" method="post" novalidate data-inquiry-form>
+        <input type="hidden" name="experience" value="Agents of Cheers">
+        <div class="inquiry-form__grid">
+          <label class="visually-hidden" for="inq-agents-of-cheer-name">Name</label>
+          <input class="inquiry-form__input" id="inq-agents-of-cheer-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+          <label class="visually-hidden" for="inq-agents-of-cheer-company">Company / Brand</label>
+          <input class="inquiry-form__input" id="inq-agents-of-cheer-company" name="company" type="text" autocomplete="organization" placeholder="Company / Brand">
+          <label class="visually-hidden" for="inq-agents-of-cheer-email">Email address</label>
+          <input class="inquiry-form__input" id="inq-agents-of-cheer-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+          <label class="visually-hidden" for="inq-agents-of-cheer-phone">Phone number</label>
+          <input class="inquiry-form__input" id="inq-agents-of-cheer-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number">
+          <label class="visually-hidden" for="inq-agents-of-cheer-market">Market(s) of interest</label>
+          <input class="inquiry-form__input" id="inq-agents-of-cheer-market" name="market" type="text" placeholder="Market(s) of interest">
+          <label class="visually-hidden" for="inq-agents-of-cheer-service">Service needed</label>
+          <div class="inquiry-form__select">
+            <select class="inquiry-form__input" id="inq-agents-of-cheer-service" name="service">
+                  <option>Tasting experience</option>
+                  <option selected>Event / festival partnership</option>
+                  <option>Brand storytelling</option>
+                  <option>Brand-led masterclass</option>
+                  <option>Buyer-seller platform</option>
+                  <option>Other</option>
+            </select>
+          </div>
+          <label class="visually-hidden" for="inq-agents-of-cheer-message">Tell us about your project</label>
+          <textarea class="inquiry-form__input inquiry-form__textarea" id="inq-agents-of-cheer-message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+        </div>
+        <button class="inquiry-form__btn" type="submit">Send inquiry</button>
+        <p class="inquiry-form__msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+  <!-- ===== Inquiry dialog: Story in a Bottle =====
+       WordPress: replace the <form> with this section's own Contact Form 7 form, e.g. [contact-form-7 id="…" title="Inquiry – Story in a Bottle"],
+       keeping a hidden field named "experience" so each submission says which section it came from. -->
+  <dialog class="inquiry" id="inquiry-story-in-a-bottle" aria-labelledby="inq-story-in-a-bottle-title" data-dialog>
+    <div class="inquiry__inner">
+      <button class="inquiry__close" type="button" aria-label="Close inquiry form" data-dialog-close>
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <div class="inquiry__intro">
+        <p class="inquiry__eyebrow">Story in a Bottle</p>
+        <h2 class="inquiry__title" id="inq-story-in-a-bottle-title">Tell us about your brand.</h2>
+        <p class="inquiry__lead">We’ll reply within a few working days.</p>
+        <a class="inquiry__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+      </div>
+      <form class="inquiry-form" id="inq-story-in-a-bottle-form" action="#" method="post" novalidate data-inquiry-form>
+        <input type="hidden" name="experience" value="Story in a Bottle">
+        <div class="inquiry-form__grid">
+          <label class="visually-hidden" for="inq-story-in-a-bottle-name">Name</label>
+          <input class="inquiry-form__input" id="inq-story-in-a-bottle-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+          <label class="visually-hidden" for="inq-story-in-a-bottle-company">Company / Brand</label>
+          <input class="inquiry-form__input" id="inq-story-in-a-bottle-company" name="company" type="text" autocomplete="organization" placeholder="Company / Brand">
+          <label class="visually-hidden" for="inq-story-in-a-bottle-email">Email address</label>
+          <input class="inquiry-form__input" id="inq-story-in-a-bottle-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+          <label class="visually-hidden" for="inq-story-in-a-bottle-phone">Phone number</label>
+          <input class="inquiry-form__input" id="inq-story-in-a-bottle-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number">
+          <label class="visually-hidden" for="inq-story-in-a-bottle-market">Market(s) of interest</label>
+          <input class="inquiry-form__input" id="inq-story-in-a-bottle-market" name="market" type="text" placeholder="Market(s) of interest">
+          <label class="visually-hidden" for="inq-story-in-a-bottle-service">Service needed</label>
+          <div class="inquiry-form__select">
+            <select class="inquiry-form__input" id="inq-story-in-a-bottle-service" name="service">
+                  <option>Tasting experience</option>
+                  <option>Event / festival partnership</option>
+                  <option selected>Brand storytelling</option>
+                  <option>Brand-led masterclass</option>
+                  <option>Buyer-seller platform</option>
+                  <option>Other</option>
+            </select>
+          </div>
+          <label class="visually-hidden" for="inq-story-in-a-bottle-message">Tell us about your project</label>
+          <textarea class="inquiry-form__input inquiry-form__textarea" id="inq-story-in-a-bottle-message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+        </div>
+        <button class="inquiry-form__btn" type="submit">Send inquiry</button>
+        <p class="inquiry-form__msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+  <!-- ===== Inquiry dialog: Brands-led Masterclass =====
+       WordPress: replace the <form> with this section's own Contact Form 7 form, e.g. [contact-form-7 id="…" title="Inquiry – Brands-led Masterclass"],
+       keeping a hidden field named "experience" so each submission says which section it came from. -->
+  <dialog class="inquiry" id="inquiry-brands-led-masterclass" aria-labelledby="inq-brands-led-masterclass-title" data-dialog>
+    <div class="inquiry__inner">
+      <button class="inquiry__close" type="button" aria-label="Close inquiry form" data-dialog-close>
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <div class="inquiry__intro">
+        <p class="inquiry__eyebrow">Brands-led Masterclass</p>
+        <h2 class="inquiry__title" id="inq-brands-led-masterclass-title">Tell us about your brand.</h2>
+        <p class="inquiry__lead">We’ll reply within a few working days.</p>
+        <a class="inquiry__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+      </div>
+      <form class="inquiry-form" id="inq-brands-led-masterclass-form" action="#" method="post" novalidate data-inquiry-form>
+        <input type="hidden" name="experience" value="Brands-led Masterclass">
+        <div class="inquiry-form__grid">
+          <label class="visually-hidden" for="inq-brands-led-masterclass-name">Name</label>
+          <input class="inquiry-form__input" id="inq-brands-led-masterclass-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+          <label class="visually-hidden" for="inq-brands-led-masterclass-company">Company / Brand</label>
+          <input class="inquiry-form__input" id="inq-brands-led-masterclass-company" name="company" type="text" autocomplete="organization" placeholder="Company / Brand">
+          <label class="visually-hidden" for="inq-brands-led-masterclass-email">Email address</label>
+          <input class="inquiry-form__input" id="inq-brands-led-masterclass-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+          <label class="visually-hidden" for="inq-brands-led-masterclass-phone">Phone number</label>
+          <input class="inquiry-form__input" id="inq-brands-led-masterclass-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number">
+          <label class="visually-hidden" for="inq-brands-led-masterclass-market">Market(s) of interest</label>
+          <input class="inquiry-form__input" id="inq-brands-led-masterclass-market" name="market" type="text" placeholder="Market(s) of interest">
+          <label class="visually-hidden" for="inq-brands-led-masterclass-service">Service needed</label>
+          <div class="inquiry-form__select">
+            <select class="inquiry-form__input" id="inq-brands-led-masterclass-service" name="service">
+                  <option>Tasting experience</option>
+                  <option>Event / festival partnership</option>
+                  <option>Brand storytelling</option>
+                  <option selected>Brand-led masterclass</option>
+                  <option>Buyer-seller platform</option>
+                  <option>Other</option>
+            </select>
+          </div>
+          <label class="visually-hidden" for="inq-brands-led-masterclass-message">Tell us about your project</label>
+          <textarea class="inquiry-form__input inquiry-form__textarea" id="inq-brands-led-masterclass-message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+        </div>
+        <button class="inquiry-form__btn" type="submit">Send inquiry</button>
+        <p class="inquiry-form__msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Libraries (deferred, order matters) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

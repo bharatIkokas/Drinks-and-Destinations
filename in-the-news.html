@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In The News | Drinks &amp; Destinations</title>
+  <meta name="description" content="Magazine features, newspapers, podcasts, interviews, speaking engagements, judging and industry recognition for Drinks &amp; Destinations and Rojita Tiwari.">
+  <meta name="theme-color" content="#f9f6f2">
+
+  <!-- Swap .no-js for .js before first paint so reveal states never flash -->
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <!-- Fonts: Hedvig Letters Serif (Google). Kross Neue Grotesk + Qartella are loaded from /fonts via @font-face in style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Space+Grotesk:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.2.0/dist/magnific-popup.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-inner page-in-the-news">
+  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <div class="site-header__left">
+        <a class="logo" href="index.html" aria-label="Drinks &amp; Destinations – home">
+          <img class="logo__img" src="images/logo.png" alt="" width="178" height="50" decoding="async">
+          <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="primary-nav__list">
+            <li><a class="nav-tab" href="index.html">Home</a></li>
+            <li class="has-dropdown" data-dropdown>
+              <div class="nav-split">
+                <a class="nav-tab nav-tab--split" href="news-insights.html">News &amp; Insights</a>
+                <button class="nav-caret" type="button" aria-expanded="false" aria-controls="dd-news" aria-label="Show News &amp; Insights menu" data-dropdown-toggle>
+                  <svg class="nav-tab__caret" width="10" height="5" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+                </button>
+              </div>
+              <ul class="dropdown" id="dd-news" data-dropdown-menu>
+                <li><a href="latest-news.html">Drinks industry news</a></li>
+                <li><a href="interviews.html">Interviews</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="industry-stories.html">Industry stories</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-tab" href="about-us.html">About us</a></li>
+            <li><a class="nav-tab" href="#">Consulting</a></li>
+            <li><a class="nav-tab" href="experiences.html">Experiences</a></li>
+            <li><a class="nav-tab" href="rtmis.html">RTMIS</a></li>
+            <li><a class="nav-tab is-active" href="in-the-news.html" aria-current="page">In the news</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-header__right">
+        <a class="btn btn--solid btn--display" href="#">Partner with us</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-burger>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html">Home</a></li>
+        <li class="mobile-menu__group">
+          <div class="mobile-menu__row">
+            <a href="news-insights.html">News &amp; Insights</a>
+            <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mm-news" aria-label="Show News &amp; Insights links" data-accordion>
+              <svg width="12" height="6" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <ul id="mm-news" class="mobile-menu__sub" hidden>
+            <li><a href="latest-news.html">Drinks industry news</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="industry-stories.html">Industry stories</a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="#">Consulting</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <li><a href="rtmis.html">RTMIS</a></li>
+        <li><a href="in-the-news.html" aria-current="page">In the news</a></li>
+      </ul>
+      <a class="btn btn--solid btn--display mobile-menu__cta" href="#">Partner with us</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ============ IN THE NEWS: INTRO ============ -->
+    <section class="itn-intro" aria-labelledby="itn-title">
+      <div class="container">
+        <div class="itn-intro__box">
+          <h1 class="itn-intro__title" id="itn-title" data-reveal>A Voice Heard Across The Drink’s World.</h1>
+          <p class="itn-intro__lead" data-reveal>Magazine features, newspapers, podcasts, interviews, speaking engagements, judging and industry recognition.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IN THE NEWS: PRESS ============
+         Click a card to see it in full (popup). Same infinite scroll as the news landing pages:
+         WordPress sets data-next-url when there are more items (omit it on the last page). -->
+    <section class="itn-press" aria-label="Press coverage">
+      <div class="container">
+        <ul class="itn-grid" role="list" data-infinite-list>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-1.jpg">
+                <img src="images/press-1.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">The Afternoon Despatch &amp; Courier</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">Some description about the news can be added here. This can be treated as sub text</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-2.jpg">
+                <img src="images/press-2.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">On Cyrus Says Podcast</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">In this episode of Cyrus Says, we have Drinks and Destination’s Rojita Tiwari, who talks about: – Her journey into the world of drinks.</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-3.jpg">
+                <img src="images/press-3.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">The Best Beverage Blog Award Second Year In A Row</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">Drinks &amp; Destinations wins the best beverage blog award second year in a row.</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-4.jpg">
+                <img src="images/press-4.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">Speaking At The Asian Wine &amp; Spirits Conference &amp; Competition – The Silkroute</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">Speaking at the Asian Wine &amp; Spirits Conference &amp; Competition -The Silkroute, Beijing, China, October 10, 2016.</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-5.jpg">
+                <img src="images/press-5.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">The Week Magazine, SmartLife October 2021</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">Some description about the news can be added here. This can be treated as sub text</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-6.jpg">
+                <img src="images/press-6.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">Outlook India Magazine, 17/09/2018: The She In The Goblet</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">In this episode of Cyrus Says, we have Drinks and Destination’s Rojita Tiwari, who talks about: – Her journey into the world of drinks.</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-7.jpg">
+                <img src="images/press-7.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">Juror At The International Spirits Competition</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">Drinks &amp; Destinations wins the best beverage blog award second year in a row.</p>
+            </a>
+          </li>
+          <li class="press-card" data-reveal-stagger>
+            <a class="press-card__link" href="#">
+              <div class="press-card__media media" data-label="press-8.jpg">
+                <img src="images/press-8.jpg" alt="" width="564" height="276" loading="lazy" decoding="async">
+              </div>
+              <div class="press-card__head">
+                <h2 class="press-card__title">TV Interview With Agrosfera, Spain</h2>
+                <p class="press-card__date"><time datetime="2021-10-14">October 14, 2021</time></p>
+              </div>
+              <p class="press-card__text">Speaking at the Asian Wine &amp; Spirits Conference &amp; Competition -The Silkroute, Beijing, China, October 10, 2016.</p>
+            </a>
+          </li>
+        </ul>
+        <div class="ln-loader" data-infinite-sentinel aria-hidden="true">
+          <span class="ln-loader__dot"></span><span class="ln-loader__dot"></span><span class="ln-loader__dot"></span>
+        </div>
+        <p class="visually-hidden" role="status" aria-live="polite" data-infinite-status></p>
+      </div>
+    </section>
+
+    <!-- ============ IN THE NEWS: VIDEO GALLERY ============ -->
+    <section class="itn-videos podcast" aria-labelledby="itn-videos-title">
+      <div class="container">
+        <h2 class="itn-videos__title" id="itn-videos-title" data-reveal>Video Gallery</h2>
+        <ul class="ep-grid" role="list">
+          <li class="ep-card">
+            <a class="ep-card__link js-video-popup" href="https://www.youtube.com/watch?v=M7lc1UVf-VE">
+              <div class="ep-card__media pod-card__media media" data-label="podcast-ep-1.jpg">
+                <img src="images/podcast-ep-1.jpg" alt="" width="704" height="380" loading="lazy" decoding="async">
+                <span class="pod-card__play" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Play podcast episode 1 video</span>
+            </a>
+          </li>
+          <li class="ep-card">
+            <a class="ep-card__link js-video-popup" href="https://www.youtube.com/watch?v=M7lc1UVf-VE">
+              <div class="ep-card__media pod-card__media media" data-label="podcast-ep-2.jpg">
+                <img src="images/podcast-ep-2.jpg" alt="" width="704" height="380" loading="lazy" decoding="async">
+                <span class="pod-card__play" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Play podcast episode 2 video</span>
+            </a>
+          </li>
+          <li class="ep-card">
+            <a class="ep-card__link js-video-popup" href="https://www.youtube.com/watch?v=M7lc1UVf-VE">
+              <div class="ep-card__media pod-card__media media" data-label="podcast-ep-3.jpg">
+                <img src="images/podcast-ep-3.jpg" alt="" width="704" height="380" loading="lazy" decoding="async">
+                <span class="pod-card__play" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Play podcast episode 3 video</span>
+            </a>
+          </li>
+          <li class="ep-card">
+            <a class="ep-card__link js-video-popup" href="https://www.youtube.com/watch?v=M7lc1UVf-VE">
+              <div class="ep-card__media pod-card__media media" data-label="podcast-ep-4.jpg">
+                <img src="images/podcast-ep-4.jpg" alt="" width="704" height="380" loading="lazy" decoding="async">
+                <span class="pod-card__play" aria-hidden="true"></span>
+              </div>
+              <span class="visually-hidden">Play podcast episode 4 video</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ STAY IN THE KNOW ============ -->
+    <section class="section signup" id="newsletter" aria-labelledby="signup-title">
+      <div class="container signup__grid">
+        <div class="signup__text">
+          <h2 class="h2" id="signup-title" data-reveal>Stay in the know</h2>
+          <p class="signup__lead" data-reveal>News, insights and the stories from the world of drinks - sent occasionally.</p>
+        </div>
+
+        <form class="signup-form" data-newsletter novalidate aria-labelledby="signup-title" data-reveal>
+          <div class="signup-form__fields">
+            <label class="visually-hidden" for="nl-name">Name</label>
+            <input class="signup-form__input" id="nl-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+            <label class="visually-hidden" for="nl-email">Email ID</label>
+            <input class="signup-form__input" id="nl-email" name="email" type="email" autocomplete="email" placeholder="Email ID" required>
+            <label class="visually-hidden" for="nl-phone">Phone number (optional)</label>
+            <input class="signup-form__input" id="nl-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number" pattern="[0-9+()\-\s]{7,20}">
+          </div>
+          <div class="signup-form__row">
+            <label class="signup-form__check">
+              <input type="checkbox" name="consent" required>
+              <span>I agree to receive updates</span>
+            </label>
+            <button class="btn btn--display signup-form__btn" type="submit">Subscribe</button>
+          </div>
+          <p class="signup-form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="partner" aria-labelledby="footer-cta-title">
+    <div class="container">
+      <p class="footer-label" data-reveal>Start a conversation</p>
+      <h2 class="footer-title" id="footer-cta-title" data-reveal>Let’s build something together</h2>
+
+      <ul class="footer-paths" role="list">
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For brands</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Consulting%20enquiry">Consulting</a></h3>
+          <p class="footer-path__text">Market entry, brand strategy and advisory for the Indian drinks market</p>
+        </li>
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For industry</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Brand%20collaboration">Brand collaboration</a></h3>
+          <p class="footer-path__text">Events, content, tasting and experiences that create real connection</p>
+        </li>
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For press</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Media%20partnership">Media partnership</a></h3>
+          <p class="footer-path__text">Editorial coverage, speaking, judging and media representation</p>
+        </li>
+      </ul>
+
+      <div class="footer-contact">
+        <a class="footer-contact__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+        <ul class="footer-social" role="list">
+          <li><a href="https://twitter.com/RojitaTiwari" target="_blank" rel="noopener" aria-label="X / Twitter (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          </a></li>
+          <li><a href="https://www.facebook.com/rojita.tiwari/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          </a></li>
+          <li><a href="https://www.instagram.com/drinksanddestinations/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <a class="logo logo--light footer-bottom__logo" href="#top" aria-label="Drinks &amp; Destinations – back to top">
+          <img class="logo__img" src="images/footer-logo.png" alt="" width="67" height="19" loading="lazy" decoding="async">
+          <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
+        </a>
+        <nav class="footer-bottom__links" aria-label="Legal">
+          <a href="#">Privacy</a>
+          <a href="mailto:drinksandestinations@gmail.com">Contact</a>
+        </nav>
+        <p class="footer-bottom__copy">© <span data-year>2026</span> Drinks and Destinations</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries (deferred, order matters) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.2.0/dist/jquery.magnific-popup.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Drinks &amp; Destinations</title>
+  <meta name="description" content="Drinks &amp; Destinations is an award-winning boutique content and consulting studio for wine, spirits and beer brands, founded by drinks writer, educator and judge Rojita Tiwari.">
+  <meta name="theme-color" content="#f9f6f2">
+
+  <!-- Swap .no-js for .js before first paint so reveal states never flash -->
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <!-- Fonts: Hedvig Letters Serif (Google). Kross Neue Grotesk + Qartella are loaded from /fonts via @font-face in style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Space+Grotesk:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-inner page-about">
+  <!-- <a class="skip-link" href="#main">Skip to content</a> -->
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <div class="site-header__left">
+        <a class="logo" href="index.html" aria-label="Drinks &amp; Destinations – home">
+          <img class="logo__img" src="images/logo.png" alt="" width="178" height="50" decoding="async">
+          <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="primary-nav__list">
+            <li><a class="nav-tab" href="index.html">Home</a></li>
+            <li class="has-dropdown" data-dropdown>
+              <div class="nav-split">
+                <a class="nav-tab nav-tab--split" href="news-insights.html">News &amp; Insights</a>
+                <button class="nav-caret" type="button" aria-expanded="false" aria-controls="dd-news" aria-label="Show News &amp; Insights menu" data-dropdown-toggle>
+                  <svg class="nav-tab__caret" width="10" height="5" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+                </button>
+              </div>
+              <ul class="dropdown" id="dd-news" data-dropdown-menu>
+                <li><a href="latest-news.html">Drinks industry news</a></li>
+                <li><a href="interviews.html">Interviews</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="industry-stories.html">Industry stories</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-tab is-active" href="about-us.html" aria-current="page">About us</a></li>
+            <li><a class="nav-tab" href="#">Consulting</a></li>
+            <li><a class="nav-tab" href="experiences.html">Experiences</a></li>
+            <li><a class="nav-tab" href="rtmis.html">RTMIS</a></li>
+            <li><a class="nav-tab" href="in-the-news.html">In the news</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-header__right">
+        <a class="btn btn--solid btn--display" href="#">Partner with us</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-burger>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html">Home</a></li>
+        <li class="mobile-menu__group">
+          <div class="mobile-menu__row">
+            <a href="news-insights.html">News &amp; Insights</a>
+            <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mm-news" aria-label="Show News &amp; Insights links" data-accordion>
+              <svg width="12" height="6" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <ul id="mm-news" class="mobile-menu__sub" hidden>
+            <li><a href="latest-news.html">Drinks industry news</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="industry-stories.html">Industry stories</a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html" aria-current="page">About us</a></li>
+        <li><a href="#">Consulting</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <li><a href="rtmis.html">RTMIS</a></li>
+        <li><a href="in-the-news.html">In the news</a></li>
+      </ul>
+      <a class="btn btn--solid btn--display mobile-menu__cta" href="#">Partner with us</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ============ ABOUT: INTRO ============ -->
+    <section class="section about-intro" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-intro__box">
+          <h1 class="about-intro__title" id="about-title" data-reveal>We don’t just talk drinks - we shape the narrative.</h1>
+          <p class="about-copy" data-reveal>As a boutique content and consulting studio, <strong>Drinks &amp; Destinations</strong> also collaborates with <strong>leading Indian and international wine</strong>, <strong>spirits</strong>, and <strong>beer brands</strong> to craft impactful strategies for:</p>
+          <ul class="about-list" role="list">
+            <li data-reveal-stagger>Brand storytelling and editorial content</li>
+            <li data-reveal-stagger>Social media strategy and influencer outreach</li>
+            <li data-reveal-stagger>Trade and consumer tastings</li>
+            <li data-reveal-stagger>Staff trainings and masterclasses</li>
+            <li data-reveal-stagger>Event curation and judging for competitions</li>
+            <li data-reveal-stagger>Product Development &amp; Brand Strategy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT: STORY ============ -->
+    <section class="section about-story" aria-labelledby="founder-title">
+      <div class="container">
+        <p class="about-copy about-story__lead" data-reveal><strong>Drinks &amp; Destinations</strong> is an award-winning platform that brings you sharp insights, curated stories, and fresh perspectives from the world of beverages, luxury travel, and hospitality. From news and reviews to tastings, podcasts, and expert interviews—this is where the spirit of discovery meets the art of drinking.</p>
+
+        <div class="about-story__grid">
+          <div class="about-story__text">
+            <h2 class="visually-hidden" id="founder-title">Founder Rojita Tiwari</h2>
+            <p class="about-copy" data-reveal>At the heart of it all is <strong>founder Rojita Tiwari</strong> an independent writer, educator, consultant, and drinks judge with with <strong>more than two decades of experience</strong> in the alco-bev industry. She has led editorial teams, developed market strategy for top brands, and contributed to globally respected drinks publications.</p>
+
+            <div class="about-note" data-reveal>
+              <p class="about-copy">Rojita is a <strong>WSET Level 3 Wine</strong> and <strong>Level 2 Spirits certified professional</strong>, twice listed among the <strong>Top Ten Women of Wine in India</strong> by the Indian Wine Academy, Most Influential F&amp;B Industry Professional 2020, the recipient of the international Wine Travel Awards 2023, and Ambassador of the Industry Award 2023 by Spiritz Magazine.</p>
+            </div>
+
+            <div class="about-events">
+              <h3 class="about-events__title" data-reveal>She has curated and judged landmark events like:</h3>
+              <ul class="about-list" role="list">
+                <li data-reveal-stagger>Celebrating India’s 50 Finest Wines (2014)</li>
+                <li data-reveal-stagger>Spirits Selection by CMB (Since 2015)</li>
+                <li data-reveal-stagger>Concours Mondial de Bruxelles Wine Competition (Since 2014)</li>
+                <li data-reveal-stagger>India Wine Awards (2017) – Technical Director</li>
+                <li data-reveal-stagger>Asian Wine &amp; Spirits Silk Route, Beijing (2016)</li>
+                <li data-reveal-stagger>Multiple national and international wine, cocktail and spirits competitions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-story__media media" data-label="about-rojita.jpg — 483 × 403" data-clip>
+            <img src="images/about-rojita.jpg" alt="Rojita Tiwari smiling and holding a glass of white wine" width="483" height="403" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <ul class="about-cards" role="list">
+          <li class="about-card" data-reveal-stagger>
+            <span class="about-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            </span>
+            <p class="about-copy">Also tune into <strong>#TheDrinksandDestinationsPodcast</strong>, where we serve up stories, trends, and conversations from across the global drinks landscape available on <a class="about-link" href="#" target="_blank" rel="noopener">Spotify</a>, <a class="about-link" href="#" target="_blank" rel="noopener">Apple Podcasts</a>, <a class="about-link" href="#" target="_blank" rel="noopener">YouTube</a>, and <a class="about-link" href="https://ivmpodcasts.com/drinks-and-destinations" target="_blank" rel="noopener">IVM<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+          </li>
+          <li class="about-card about-card--center" data-reveal-stagger>
+            <span class="about-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 5h18v14H3V5Zm2.4 2v10h2.2v-6.2L12 15l4.4-4.2V17h2.2V7h-1.5L12 12 6.9 7H5.4Z"/></svg>
+            </span>
+            <p class="about-copy">For collaborations, consulting, content partnerships or events:<br><a class="about-link" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ STAY IN THE KNOW ============ -->
+    <section class="section signup" id="newsletter" aria-labelledby="signup-title">
+      <div class="container signup__grid">
+        <div class="signup__text">
+          <h2 class="h2" id="signup-title" data-reveal>Stay in the know</h2>
+          <p class="signup__lead" data-reveal>News, insights and the stories from the world of drinks - sent occasionally.</p>
+        </div>
+
+        <form class="signup-form" data-newsletter novalidate aria-labelledby="signup-title" data-reveal>
+          <div class="signup-form__fields">
+            <label class="visually-hidden" for="nl-name">Name</label>
+            <input class="signup-form__input" id="nl-name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+            <label class="visually-hidden" for="nl-email">Email ID</label>
+            <input class="signup-form__input" id="nl-email" name="email" type="email" autocomplete="email" placeholder="Email ID" required>
+            <label class="visually-hidden" for="nl-phone">Phone number (optional)</label>
+            <input class="signup-form__input" id="nl-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Phone number" pattern="[0-9+()\-\s]{7,20}">
+          </div>
+          <div class="signup-form__row">
+            <label class="signup-form__check">
+              <input type="checkbox" name="consent" required>
+              <span>I agree to receive updates</span>
+            </label>
+            <button class="btn btn--display signup-form__btn" type="submit">Subscribe</button>
+          </div>
+          <p class="signup-form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="partner" aria-labelledby="footer-cta-title">
+    <div class="container">
+      <p class="footer-label" data-reveal>Start a conversation</p>
+      <h2 class="footer-title" id="footer-cta-title" data-reveal>Let’s build something together</h2>
+
+      <ul class="footer-paths" role="list">
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For brands</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Consulting%20enquiry">Consulting</a></h3>
+          <p class="footer-path__text">Market entry, brand strategy and advisory for the Indian drinks market</p>
+        </li>
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For industry</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Brand%20collaboration">Brand collaboration</a></h3>
+          <p class="footer-path__text">Events, content, tasting and experiences that create real connection</p>
+        </li>
+        <li class="footer-path" data-reveal-stagger>
+          <p class="footer-label">For press</p>
+          <h3 class="footer-path__title"><a href="mailto:drinksandestinations@gmail.com?subject=Media%20partnership">Media partnership</a></h3>
+          <p class="footer-path__text">Editorial coverage, speaking, judging and media representation</p>
+        </li>
+      </ul>
+
+      <div class="footer-contact">
+        <a class="footer-contact__mail" href="mailto:drinksandestinations@gmail.com">drinksandestinations@gmail.com</a>
+        <ul class="footer-social" role="list">
+          <li><a href="https://twitter.com/RojitaTiwari" target="_blank" rel="noopener" aria-label="X / Twitter (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          </a></li>
+          <li><a href="https://www.facebook.com/rojita.tiwari/" target="_blank" rel="noopener" aria-label="Facebook (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          </a></li>
+          <li><a href="https://www.instagram.com/drinksanddestinations/" target="_blank" rel="noopener" aria-label="Instagram (opens in a new tab)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <a class="logo logo--light footer-bottom__logo" href="#top" aria-label="Drinks &amp; Destinations – back to top">
+          <img class="logo__img" src="images/footer-logo.png" alt="" width="67" height="19" loading="lazy" decoding="async">
+          <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
+        </a>
+        <nav class="footer-bottom__links" aria-label="Legal">
+          <a href="#">Privacy</a>
+          <a href="mailto:drinksandestinations@gmail.com">Contact</a>
+        </nav>
+        <p class="footer-bottom__copy">© <span data-year>2026</span> Drinks and Destinations</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries (deferred, order matters) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

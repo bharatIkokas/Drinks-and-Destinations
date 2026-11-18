@@ -9,7 +9,7 @@
   const root = document.documentElement;
   const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const prefersReducedMotion = reduceMotionQuery.matches;
-  const DESKTOP_NAV_MQ = window.matchMedia('(min-width: 1200px)');
+  const DESKTOP_NAV_MQ = window.matchMedia('(min-width: 1280px)');
 
   const hasGSAP = typeof window.gsap !== 'undefined';
   const hasScrollTrigger = hasGSAP && typeof window.ScrollTrigger !== 'undefined';
@@ -95,6 +95,7 @@
   /* ---------- Anchor links ---------- */
   function initAnchors() {
     document.addEventListener('click', (event) => {
+      if (event.defaultPrevented) return; // already handled (e.g. a popup trigger)
       const link = event.target.closest('a[href^="#"]');
       if (!link) return;
 
@@ -239,7 +240,9 @@
     burger.setAttribute('aria-expanded', 'true');
     burger.setAttribute('aria-label', 'Close menu');
     root.classList.add('menu-open');
-    document.body.style.overflow = 'hidden';
+    // Lock scroll on <html>, not <body>: overflow on <body> (with Lenis locking <html>)
+    // turns <body> into the sticky header's scroll container and the header jumps to page top.
+    root.style.overflow = 'hidden';
     if (lenis) lenis.stop();
 
     const header = $('[data-header]');
@@ -262,7 +265,7 @@
     burger.setAttribute('aria-expanded', 'false');
     burger.setAttribute('aria-label', 'Open menu');
     root.classList.remove('menu-open');
-    document.body.style.overflow = '';
+    root.style.overflow = '';
     if (lenis) lenis.start();
     if (returnFocus) burger.focus();
   }
@@ -566,7 +569,9 @@
 
     // Experience & press cards slide in
     ['.exp-card', '.press-card'].forEach((sel) => {
-      const cards = $$(sel);
+      // Cards already animated by [data-reveal-stagger] are skipped: two tweens on one card
+      // make the reveal's overwrite cut this slide-in short and leave the card shifted sideways.
+      const cards = $$(sel).filter((card) => !card.hasAttribute('data-reveal-stagger'));
       if (!cards.length) return;
       gsap.from(cards, {
         opacity: 0,
@@ -661,6 +666,239 @@
     });
   }
 
+  /* ---------- In the News: open the full card in a popup ---------- */
+  function initPressPopups() {
+    const $j = window.jQuery;
+    if (!$j || !$j.fn.magnificPopup || !$('.press-card__link')) return;
+
+    const buildPopup = (link) => {
+      const pick = (sel) => $(sel, link);
+      const img = pick('.press-card__media img');
+      const title = pick('.press-card__title');
+      const date = pick('.press-card__date');
+      const text = pick('.press-card__text');
+
+      const box = document.createElement('article');
+      box.className = 'press-popup';
+      box.setAttribute('role', 'dialog');
+      box.setAttribute('aria-modal', 'true');
+      box.setAttribute('aria-labelledby', 'press-popup-title');
+
+      if (img && !img.classList.contains('is-missing') && img.naturalWidth) {
+        const media = document.createElement('div');
+        media.className = 'press-popup__media';
+        const copy = img.cloneNode();
+        copy.removeAttribute('loading');
+        copy.removeAttribute('style');
+        media.appendChild(copy);
+        box.appendChild(media);
+      }
+
+      const body = document.createElement('div');
+      body.className = 'press-popup__body';
+      if (title) {
+        const h = document.createElement('h3');
+        h.className = 'press-popup__title';
+        h.id = 'press-popup-title';
+        h.textContent = title.textContent.trim();
+        body.appendChild(h);
+      }
+      if (date) {
+        const d = date.cloneNode(true);
+        d.className = 'press-popup__date';
+        body.appendChild(d);
+      }
+      if (text) {
+        const p = document.createElement('p');
+        p.className = 'press-popup__text';
+        p.textContent = text.textContent.trim();
+        body.appendChild(p);
+      }
+      box.appendChild(body);
+      return box;
+    };
+
+    // One delegated listener (capture phase, so it runs before the anchor-scroll handler):
+    // also covers press cards appended later by the infinite list.
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('.press-card__link');
+      if (!link) return;
+      event.preventDefault();
+      $j.magnificPopup.open({
+        items: { src: buildPopup(link), type: 'inline' },
+        mainClass: 'mfp-fade mfp-press',
+        removalDelay: 300,
+        fixedContentPos: true,
+        closeBtnInside: true,
+        callbacks: {
+          open() { if (lenis) lenis.stop(); },
+          close() { if (lenis) lenis.start(); },
+        },
+      });
+    }, true);
+  }
+
+  /* ---------- Infinite scroll (Latest News "You can also read") ----------
+     The list carries data-next-url (WordPress: get_next_posts_page_link()). When the sentinel
+     below it nears the viewport, that page is fetched, the cards in its [data-infinite-list]
+     are appended, and the next URL is taken from that page. No data-next-url = last page. */
+  /* ---------- Dialogs (native <dialog>) ----------
+     A button with data-dialog-open="<dialog id>" opens that dialog. Esc, the close button
+     ([data-dialog-close]) or a click on the backdrop closes it; focus returns to the button. */
+  function initDialogs() {
+    const dialogs = $$('dialog[data-dialog]');
+    if (!dialogs.length || typeof HTMLDialogElement === 'undefined') return;
+
+    let opener = null;
+    const lock = (on) => {
+      root.style.overflow = on ? 'hidden' : '';
+      if (lenis) { if (on) lenis.stop(); else lenis.start(); }
+    };
+
+    $$('[data-dialog-open]').forEach((btn) => {
+      const dialog = document.getElementById(btn.dataset.dialogOpen);
+      if (!dialog) return;
+      btn.addEventListener('click', () => {
+        opener = btn;
+        dialog.showModal();
+        lock(true);
+        const first = $('input:not([type="hidden"]), select, textarea', dialog);
+        if (first) first.focus();
+      });
+    });
+
+    dialogs.forEach((dialog) => {
+      $$('[data-dialog-close]', dialog).forEach((btn) => btn.addEventListener('click', () => dialog.close()));
+      // Backdrop click: the click lands on the <dialog> itself, outside its inner box
+      dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', () => {
+        lock(false);
+        if (opener) opener.focus({ preventScroll: true });
+        opener = null;
+      });
+    });
+  }
+
+  /* ---------- Inquiry forms (static demo; WordPress Contact Form 7 takes over) ----------
+     Only forms marked data-inquiry-form are handled here, so a CF7 form dropped in later
+     keeps its own validation and submission. */
+  function initInquiryForms() {
+    $$('form[data-inquiry-form]').forEach((form) => {
+      const msg = $('.inquiry-form__msg', form);
+      const setMsg = (text, isError) => {
+        if (!msg) return;
+        msg.textContent = text;
+        msg.classList.toggle('is-error', isError);
+      };
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const fields = $$('input:not([type="hidden"]), select, textarea', form);
+        let firstBad = null;
+        fields.forEach((field) => {
+          const bad = !field.checkValidity() || (field.required && !field.value.trim());
+          field.setAttribute('aria-invalid', String(bad));
+          if (bad && !firstBad) firstBad = field;
+        });
+        if (firstBad) {
+          setMsg(firstBad.type === 'email' && firstBad.value ? 'Please enter a valid email address.' : 'Please fill in your name, email and a few words about your project.', true);
+          firstBad.focus();
+          return;
+        }
+        // TODO (WordPress): replace this form with the section's Contact Form 7 form.
+        setMsg('Thank you — we’ll be in touch within a few working days.', false);
+        form.reset();
+      });
+
+      form.addEventListener('input', (event) => {
+        if (event.target.getAttribute('aria-invalid') === 'true') {
+          event.target.setAttribute('aria-invalid', 'false');
+          if (msg && msg.classList.contains('is-error')) setMsg('', false);
+        }
+      });
+    });
+  }
+
+  function initInfiniteList() {
+    const list = $('[data-infinite-list]');
+    const sentinel = $('[data-infinite-sentinel]');
+    if (!list || !sentinel) return;
+    const status = $('[data-infinite-status]');
+
+    let nextUrl = list.dataset.nextUrl || '';
+    let loading = false;
+    let observer = null;
+
+    // Nothing (more) to load: take the loader out of the page entirely
+    const finish = () => {
+      nextUrl = '';
+      if (observer) observer.disconnect();
+      sentinel.remove();
+    };
+    if (!nextUrl) {
+      finish();
+      if (status) status.remove();
+      return;
+    }
+
+    const nearViewport = () => sentinel.getBoundingClientRect().top < window.innerHeight + 400;
+
+    const prepareCard = (item) => {
+      // Appended cards skip the scroll-reveal system (it would leave them hidden) and fade in instead
+      item.removeAttribute('data-reveal-stagger');
+      $$('[data-reveal], [data-reveal-stagger]', item).forEach((el) => {
+        el.removeAttribute('data-reveal'); el.removeAttribute('data-reveal-stagger');
+      });
+      $$('img', item).forEach((img) => {
+        img.addEventListener('error', () => img.classList.add('is-missing'));
+        img.addEventListener('load', () => img.classList.remove('is-missing'));
+      });
+      return item;
+    };
+
+    const loadNext = async () => {
+      if (loading || !nextUrl) return;
+      loading = true;
+      sentinel.classList.add('is-loading');
+      if (status) status.textContent = 'Loading more stories…';
+
+      try {
+        const res = await fetch(nextUrl, { credentials: 'same-origin' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+        const incoming = doc.querySelector('[data-infinite-list]');
+        const items = incoming ? Array.from(incoming.children) : [];
+
+        const added = items.map((item) => list.appendChild(prepareCard(document.importNode(item, true))));
+        if (hasGSAP && !prefersReducedMotion && added.length) {
+          window.gsap.from(added, { opacity: 0, y: 24, duration: 0.7, stagger: 0.08, ease: 'power3.out', clearProps: 'all' });
+        }
+        if (status) status.textContent = added.length ? `${added.length} more stories loaded.` : '';
+
+        nextUrl = (incoming && incoming.dataset.nextUrl) || '';
+        refreshScrollTriggers();
+      } catch (err) {
+        if (status) status.textContent = '';
+        finish();
+      } finally {
+        sentinel.classList.remove('is-loading');
+        loading = false;
+      }
+
+      if (!nextUrl) finish();
+      else if (nearViewport()) loadNext(); // tall screens: keep filling until the sentinel is out of view
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      window.addEventListener('scroll', () => { if (nearViewport()) loadNext(); }, { passive: true });
+      return;
+    }
+    observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) loadNext();
+    }, { rootMargin: '0px 0px 400px 0px' });
+    observer.observe(sentinel);
+  }
+
   /* ---------- Boot ---------- */
   function init() {
     initImageFallbacks();
@@ -674,6 +912,10 @@
     initSliders();
     initNewsletter();
     initVideoPopups();
+    initPressPopups();
+    initInfiniteList();
+    initDialogs();
+    initInquiryForms();
   }
 
   if (document.readyState === 'loading') {

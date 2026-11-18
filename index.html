@@ -29,31 +29,33 @@
   <header class="site-header" data-header>
     <div class="site-header__inner">
       <div class="site-header__left">
-        <a class="logo" href="#" aria-label="Drinks &amp; Destinations – home">
+        <a class="logo" href="index.html" aria-label="Drinks &amp; Destinations – home">
           <img class="logo__img" src="images/logo.png" alt="" width="178" height="50" decoding="async">
           <span class="logo__text" aria-hidden="true">Drinks <span class="logo__amp">&amp;</span><br>Destinations</span>
         </a>
 
         <nav class="primary-nav" aria-label="Primary">
           <ul class="primary-nav__list">
-            <li><a class="nav-tab is-active" href="#" aria-current="page">Home</a></li>
+            <li><a class="nav-tab is-active" href="index.html" aria-current="page">Home</a></li>
             <li class="has-dropdown" data-dropdown>
-              <button class="nav-tab" type="button" aria-expanded="false" aria-controls="dd-news" data-dropdown-toggle>
-                News &amp; Insights
-                <svg class="nav-tab__caret" width="10" height="5" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
-              </button>
+              <div class="nav-split">
+                <a class="nav-tab nav-tab--split" href="news-insights.html">News &amp; Insights</a>
+                <button class="nav-caret" type="button" aria-expanded="false" aria-controls="dd-news" aria-label="Show News &amp; Insights menu" data-dropdown-toggle>
+                  <svg class="nav-tab__caret" width="10" height="5" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+                </button>
+              </div>
               <ul class="dropdown" id="dd-news" data-dropdown-menu>
-                <li><a href="#">Drinks industry news</a></li>
-                <li><a href="#">Interviews</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Industry stories</a></li>
+                <li><a href="latest-news.html">Drinks industry news</a></li>
+                <li><a href="interviews.html">Interviews</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="industry-stories.html">Industry stories</a></li>
               </ul>
             </li>
-            <li><a class="nav-tab" href="#">About us</a></li>
+            <li><a class="nav-tab" href="about-us.html">About us</a></li>
             <li><a class="nav-tab" href="#">Consulting</a></li>
-            <li><a class="nav-tab" href="#">Experiences</a></li>
-            <li><a class="nav-tab" href="#">RTMIS</a></li>
-            <li><a class="nav-tab" href="#">In the news</a></li>
+            <li><a class="nav-tab" href="experiences.html">Experiences</a></li>
+            <li><a class="nav-tab" href="rtmis.html">RTMIS</a></li>
+            <li><a class="nav-tab" href="in-the-news.html">In the news</a></li>
           </ul>
         </nav>
       </div>
@@ -73,24 +75,26 @@
   <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
     <nav class="mobile-menu__nav" aria-label="Mobile">
       <ul class="mobile-menu__list">
-        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li class="mobile-menu__group">
-          <button type="button" aria-expanded="false" aria-controls="mm-news" data-accordion>
-            News &amp; Insights
-            <svg width="10" height="5" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
-          </button>
+          <div class="mobile-menu__row">
+            <a href="news-insights.html">News &amp; Insights</a>
+            <button class="mobile-menu__toggle" type="button" aria-expanded="false" aria-controls="mm-news" aria-label="Show News &amp; Insights links" data-accordion>
+              <svg width="12" height="6" viewBox="0 0 10 5" aria-hidden="true"><path d="M0 0h10L5 5z" fill="currentColor"/></svg>
+            </button>
+          </div>
           <ul id="mm-news" class="mobile-menu__sub" hidden>
-            <li><a href="#">Drinks industry news</a></li>
-            <li><a href="#">Interviews</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Industry stories</a></li>
+            <li><a href="latest-news.html">Drinks industry news</a></li>
+            <li><a href="interviews.html">Interviews</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="industry-stories.html">Industry stories</a></li>
           </ul>
         </li>
-        <li><a href="#">About us</a></li>
+        <li><a href="about-us.html">About us</a></li>
         <li><a href="#">Consulting</a></li>
-        <li><a href="#">Experiences</a></li>
-        <li><a href="#">RTMIS</a></li>
-        <li><a href="#">In the news</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <li><a href="rtmis.html">RTMIS</a></li>
+        <li><a href="in-the-news.html">In the news</a></li>
       </ul>
       <a class="btn btn--solid btn--display mobile-menu__cta" href="#">Partner with us</a>
     </nav>
@@ -241,7 +245,7 @@
       <div class="container">
         <div class="sec-head">
           <p class="eyebrow sec-head__eyebrow" data-reveal>Experiences</p>
-          <a class="text-link sec-head__all" href="#experiences" data-reveal>Explore all experiences</a>
+          <a class="text-link sec-head__all" href="experiences.html" data-reveal>Explore all experiences</a>
           <h2 class="h2 sec-head__title" id="exp-title" data-reveal>Experiences That Brings People Together.</h2>
           <p class="body-lg sec-head__lead" data-reveal>Tastings, masterclasses, buyer-seller platforms and curated industry events — designed to create real connections across the drinks world.</p>
         </div>
@@ -253,7 +257,7 @@
             </div>
             <h3 class="exp-card__title">The Tasting Atlas</h3>
             <p class="exp-card__text">Description about the experience category goes here</p>
-            <a class="text-link stretched-link exp-card__link" href="#experiences">Read the story<span class="visually-hidden"> about The Tasting Atlas</span></a>
+            <a class="text-link stretched-link exp-card__link" href="experiences.html#tasting-atlas">Read the story<span class="visually-hidden"> about The Tasting Atlas</span></a>
           </li>
           <li class="exp-card">
             <div class="exp-card__media media" data-label="exp-story-in-a-bottle.png">
@@ -261,7 +265,7 @@
             </div>
             <h3 class="exp-card__title">Story in a Bottle</h3>
             <p class="exp-card__text">Description about the experience category goes here</p>
-            <a class="text-link stretched-link exp-card__link" href="#experiences">Read the story<span class="visually-hidden"> about Story in a Bottle</span></a>
+            <a class="text-link stretched-link exp-card__link" href="experiences.html#story-in-a-bottle">Read the story<span class="visually-hidden"> about Story in a Bottle</span></a>
           </li>
           <li class="exp-card">
             <div class="exp-card__media media" data-label="exp-agents-of-cheer.png">
@@ -269,7 +273,7 @@
             </div>
             <h3 class="exp-card__title">Agents of Cheer</h3>
             <p class="exp-card__text">Description about the experience category goes here</p>
-            <a class="text-link stretched-link exp-card__link" href="#experiences">Read the story<span class="visually-hidden"> about Agents of Cheer</span></a>
+            <a class="text-link stretched-link exp-card__link" href="experiences.html#agents-of-cheer">Read the story<span class="visually-hidden"> about Agents of Cheer</span></a>
           </li>
           <li class="exp-card">
             <div class="exp-card__media exp-card__media--cover media media--dark" data-label="exp-masterclasses.png">
@@ -277,7 +281,7 @@
             </div>
             <h3 class="exp-card__title">Brands-led Masterclasses</h3>
             <p class="exp-card__text">Description about the experience category goes here</p>
-            <a class="text-link stretched-link exp-card__link" href="#experiences">Read the story<span class="visually-hidden"> about Brands-led Masterclasses</span></a>
+            <a class="text-link stretched-link exp-card__link" href="experiences.html#brands-led-masterclass">Read the story<span class="visually-hidden"> about Brands-led Masterclasses</span></a>
           </li>
         </ul>
       </div>
@@ -288,14 +292,14 @@
       <div class="container">
         <div class="sec-head">
           <p class="eyebrow sec-head__eyebrow" data-reveal>Original Episodes</p>
-          <a class="text-link sec-head__all" href="#rtmis" data-reveal>View all episodes</a>
+          <a class="text-link sec-head__all" href="rtmis.html" data-reveal>View all episodes</a>
           <h2 class="h2 sec-head__title" id="rtmis-title" data-reveal>The Adventures Of RTmis</h2>
           <p class="body-lg sec-head__lead" data-reveal>A monthly graphic series from the world of drinks</p>
         </div>
 
         <ul class="ep-grid" role="list">
           <li class="ep-card">
-            <a class="ep-card__link" href="#rtmis">
+            <a class="ep-card__link" href="rtmis.html">
               <div class="ep-card__media media media--dark" data-label="rtmis-ep-1.jpg">
                 <img src="images/rtmis-ep-1.jpg" alt="" width="704" height="372" loading="lazy" decoding="async">
               </div>
@@ -303,7 +307,7 @@
             </a>
           </li>
           <li class="ep-card">
-            <a class="ep-card__link" href="#rtmis">
+            <a class="ep-card__link" href="rtmis.html">
               <div class="ep-card__media media media--dark" data-label="rtmis-ep-2.jpg">
                 <img src="images/rtmis-ep-2.jpg" alt="" width="704" height="372" loading="lazy" decoding="async">
               </div>
@@ -311,7 +315,7 @@
             </a>
           </li>
           <li class="ep-card">
-            <a class="ep-card__link" href="#rtmis">
+            <a class="ep-card__link" href="rtmis.html">
               <div class="ep-card__media media" data-label="rtmis-ep-3.jpg">
                 <img src="images/rtmis-ep-3.jpg" alt="" width="704" height="372" loading="lazy" decoding="async">
               </div>
@@ -319,7 +323,7 @@
             </a>
           </li>
           <li class="ep-card">
-            <a class="ep-card__link" href="#rtmis">
+            <a class="ep-card__link" href="rtmis.html">
               <div class="ep-card__media media" data-label="rtmis-ep-4.jpg">
                 <img src="images/rtmis-ep-4.jpg" alt="" width="704" height="372" loading="lazy" decoding="async">
               </div>
@@ -441,7 +445,7 @@
           <div class="swiper-pagination press-pagination"></div>
         </div>
 
-        <a class="text-link press__all" href="#in-the-news" data-reveal>View all news</a>
+        <a class="text-link press__all" href="in-the-news.html" data-reveal>View all news</a>
       </div>
     </section>
 
