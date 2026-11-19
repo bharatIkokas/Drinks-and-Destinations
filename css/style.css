@@ -657,6 +657,13 @@ a:hover .text-link, .text-link:hover { color: var(--c-black); text-underline-off
 }
 .ep-card__link { display: block; }
 .ep-card__media { aspect-ratio: 176 / 93; }
+.ep-card__link { text-decoration: none; color: var(--c-black); }
+.ep-card__label {
+  display: block; margin-top: 12px; text-align: center;
+  font-family: var(--f-serif); font-size: var(--fs-body); line-height: 1.3; letter-spacing: 0.02em;
+  transition: color var(--t-fast);
+}
+.ep-card__link:hover .ep-card__label { color: var(--c-wine); }
 .ep-card__media img { transition: transform 0.9s var(--ease-out); }
 .ep-card__link:hover .ep-card__media img { transform: scale(1.04); }
 @media (min-width: 992px) { .ep-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; } }
@@ -1335,7 +1342,10 @@ a:hover .text-link, .text-link:hover { color: var(--c-black); text-underline-off
 }
 .story-block__text p + p { margin-top: 4px; }
 .story-block__figure { margin: 0; }
-.story-block__img { aspect-ratio: 4 / 3; }
+/* Story images keep their own proportions (no crop): they may contain text */
+.story-block__img img { position: static; display: block; width: 100%; height: auto; object-fit: contain; }
+.story-block__img:has(img.is-missing) { aspect-ratio: 4 / 3; } /* placeholder until the file exists */
+.story-block__img:has(img.is-missing) img { position: absolute; }
 .story-block__figure figcaption {
   margin-top: 10px; font-family: var(--f-times); font-style: italic; font-size: 13px; line-height: 1.5; color: var(--c-black);
 }
